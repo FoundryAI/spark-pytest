@@ -20,5 +20,5 @@ jobs:
       - uses: actions/checkout@master
       - name: Example pytest
         run: make spark-pytest
-        working-drectory: ${{env.working-directory}}
+        working-directory: ${{env.working-directory}}
 

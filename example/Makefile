@@ -1,5 +1,5 @@
 help:
-	@echo "build-job - package job"
+	@echo "docker-build - build example docker image"
 	@echo "spark-pytest - run tests"
 
 docker-build:
