@@ -60,4 +60,4 @@ Complete these steps to prepare for local Python development:
 
 
 ---
-[Foundru is hiring!](https://foundry.ai/careers/)
+[Foundry is hiring!](https://foundry.ai/careers/)
