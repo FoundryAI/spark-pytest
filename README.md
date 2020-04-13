@@ -1,7 +1,35 @@
 # spark-pytest
-Dockerization of a pytest environment for tests that use Spark
+Dockerization of a pytest environment for tests that use Spark.
 
 ![CI Workflow](https://github.com/FoundryAI/spark-pytest/workflows/CI%20Workflow/badge.svg)
+
+### Example Usage Steps
+
+See the sample code in the `example/` directory and the workflow in `.github/workflows/ci.yml` for a bare-bones use case.
+
+1. Create a Dockerfile within the repo to test
+```
+FROM foundryai/spark-pytest:latest
+
+WORKDIR /usr/src/app
+
+ADD requirements.txt /usr/src/app
+ADD requirements-dev.txt /usr/src/app
+
+RUN pip install -r requirements.txt
+RUN pip install -r requirements-dev.txt
+
+COPY . /usr/src/app
+
+CMD ["pytest"]
+
+```
+
+2.) Build the latest Docker image of the source code. (See `docker-build` in `example/Makefile`.)
+
+3.) Run the tests. (See `spark-pytest` in `example/Makefile`.)
+
+(Note: running `make spark-pytest` in the `example/` directory will complete steps 2 and 3 at once.)
 
 
 ---
@@ -26,3 +54,7 @@ Complete these steps to prepare for local Python development:
 
 ### References
 [Developing and Testing ETL Scripts Locally Using the AWS Glue ETL Library](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-libraries.html)
+
+
+---
+[We're hiring!](https://foundry.ai/careers/)

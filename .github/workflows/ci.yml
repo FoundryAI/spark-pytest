@@ -12,3 +12,13 @@ jobs:
           name: foundryai/spark-pytest
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+  verify-example:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./example
+    steps:
+      - uses: actions/checkout@master
+      - name: Example pytest
+        run: make spark-pytest
+        working-drectory: ${{env.working-directory}}
+
