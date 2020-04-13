@@ -1,7 +1,11 @@
 # spark-pytest
-Dockerization of local pytest environment for tests that use Spark
+Dockerization of a pytest environment for tests that use Spark
 
-### Setup
+![CI Workflow](https://github.com/FoundryAI/spark-pytest/workflows/CI%20Workflow/badge.svg)
+
+
+---
+### Non-Dockerized setup steps
 1. Install maven, run the `brew install maven` command. If you are not running on MacOS, see the manual install steps below.
 
 ### Prerequisites for Local PySpark Development
