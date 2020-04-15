@@ -6,7 +6,7 @@ FROM maven:3.6-jdk-8 as build
 
 # Install Python
 RUN apt-get update \
-  && apt-get install -y python3-pip python3-dev zip unzip \
+  && apt-get install -y python3-pip python3-dev zip unzip docker.io \
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
   && pip3 install --upgrade pip
